@@ -1,5 +1,10 @@
+version: '3.8'
+
 services:
   media-server:
+    # Use pre-built image from GitHub Container Registry
+    image: ghcr.io/ferdiu/media-share-server:latest
+    # Or build locally:
     build: .
     container_name: media-share-server
     restart: unless-stopped
